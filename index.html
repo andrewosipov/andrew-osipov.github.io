@@ -32,6 +32,8 @@
         const editor = tinymce.init({
             selector: '#editor',
             plugins: "image",
+            menubar: "insert",
+            toolbar: "image",
         });
 
         editor.setData(ext.field.getValue())
