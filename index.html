@@ -18,8 +18,8 @@
         }
         div#editor {
             width:100%;
-            min-height:350px;
-            max-height: 500px;
+            min-height:550px;
+            max-height: 700px;
         }
     </style>
 </head>
@@ -31,7 +31,7 @@
         ext.window.startAutoResizer()
         const editor = tinymce.init({
             selector: '#editor',
-            plugins: "autoresize textpattern lists advlist a11ychecker linkchecker media mediaembed tinymcespellchecker advcode",
+            plugins: "autoresize textpattern lists advlist a11ychecker linkchecker media tinymcespellchecker advcode",
             toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | code",
             menubar: "edit view insert format",
             link_class_list: [
