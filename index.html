@@ -29,7 +29,8 @@
         var currentValue
         ext.window.startAutoResizer()
         const editor = tinymce.init({
-            selector: '#editor'
+            selector: '#editor',
+            plugins: "image",
         });
 
         editor.setData(ext.field.getValue())
