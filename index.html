@@ -26,9 +26,9 @@
 <body>
 <div id="editor"></div>
 <script>
-    window.contentfulExtension.init(function (ext) {
+    window.contentfulExtension.init(function (api) {
         var currentValue
-        var api = ext.window.startAutoResizer()
+        api.window.startAutoResizer()
         const editor = tinymce.init({
             selector: '#editor',
             max_height: 500,
