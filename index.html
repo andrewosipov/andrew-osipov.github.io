@@ -31,9 +31,9 @@
         ext.window.startAutoResizer()
         const editor = tinymce.init({
             selector: '#editor',
-            plugins: "image",
-            menubar: "insert",
-            toolbar: "image",
+            plugins: "autoresize textpattern lists advlist a11ychecker linkchecker media mediaembed powerpaste tinymcespellchecker advcode",
+            toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | code",
+            menubar: "edit view insert format",
         });
 
         editor.setData(ext.field.getValue())
