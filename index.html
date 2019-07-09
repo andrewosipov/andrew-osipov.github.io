@@ -27,8 +27,8 @@
 <div id="editor"></div>
 <script>
     window.contentfulExtension.init(function (api) {
-        var currentValue
-        api.window.startAutoResizer()
+        var currentValue;
+        api.window.startAutoResizer();
         const editor = tinymce.init({
             selector: '#editor',
             max_height: 700,
@@ -43,7 +43,7 @@
                 {title: 'Button green', value: 'button button__green'}
             ],
             preview_styles: "font-family font-size font-weight font-style text-decoration text-transform color background-color border border-radius outline text-shadow padding margin",
-            content_css: "/styles.css",
+            content_css: "/styles/styles.css",
             // quickbars_insert_toolbar: 'quickimage quicktable',
             init_instance_callback : function(editor) {
                 var listening = true;
@@ -60,7 +60,6 @@
                     var apiContent = x || '';
                     var editorContent = getEditorContent();
                     if (apiContent !== editorContent) {
-                        //console.log('Setting editor content to: [' + apiContent + ']');
                         editor.setContent(apiContent);
                     }
                 }
@@ -93,21 +92,6 @@
                 editor.on('change keyup setcontent blur', onEditorChange);
             }
         });
-
-       /* editor.setData(ext.field.getValue())
-        ext.field.onValueChanged(function(value) {
-            if (value !== currentValue) {
-                currentValue = value
-                editor.setData(value)
-            }
-        })
-        editor.on('change', function() {
-            const value = editor.getData()
-            if (currentValue !== value) {
-                currentValue = value
-                ext.field.setValue(value)
-            }
-        })*/
     })
 </script>
 </body>
