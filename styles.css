@@ -1,3 +1,27 @@
+.button, a.button{
+    box-sizing: border-box;
+    text-decoration: none;
+    background: #009D9A;
+    color: #fff;
+    text-align: center;
+    padding: 10px 45px 10px 45px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: all ease-in 0.1s;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button:hover, a.button:hover, .button:focus, a.button:focus{
+    background: #009D9A;
+    color: #fff !important;
+    outline: none;
+}
 
 .button__transparent{
     background: #fff !important;
