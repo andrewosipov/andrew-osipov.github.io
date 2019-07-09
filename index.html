@@ -86,8 +86,8 @@
                     }
                 }
 
-                var throttled = _.throttle(onEditorChange, 500, {leading: true});
-                editor.on('change keyup setcontent blur', throttled);
+                // var throttled = _.throttle(onEditorChange, 500, {leading: true});
+                editor.on('change keyup setcontent blur', onEditorChange);
             }
         });
 
