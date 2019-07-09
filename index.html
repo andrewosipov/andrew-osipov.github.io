@@ -28,9 +28,11 @@
 <script>
     window.contentfulExtension.init(function (ext) {
         var currentValue
-        ext.window.startAutoResizer()
+        var api = ext.window.startAutoResizer()
         const editor = tinymce.init({
             selector: '#editor',
+            max_height: 500,
+            min_height: 300,
             plugins: "autoresize textpattern lists advlist media link",
             toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | link | code",
             menubar: "edit view insert format",
@@ -40,9 +42,56 @@
                 {title: 'Button', value: 'button'},
                 {title: 'Big button', value: 'button-big'}
             ],
+            init_instance_callback : function(editor) {
+                var listening = true;
+
+                function getEditorContent() {
+                    return editor.getContent() || '';
+                }
+
+                function getApiContent() {
+                    return api.field.getValue() || '';
+                }
+
+                function setContent(x) {
+                    var apiContent = x || '';
+                    var editorContent = getEditorContent();
+                    if (apiContent !== editorContent) {
+                        //console.log('Setting editor content to: [' + apiContent + ']');
+                        editor.setContent(apiContent);
+                    }
+                }
+
+                setContent(api.field.getValue());
+
+                api.field.onValueChanged(function(x) {
+                    if (listening) {
+                        setContent(x);
+                    }
+                });
+
+                function onEditorChange() {
+                    var editorContent = getEditorContent();
+                    var apiContent = getApiContent();
+
+                    if (editorContent !== apiContent) {
+                        //console.log('Setting content in api to: [' + editorContent + ']');
+                        listening = false;
+                        api.field.setValue(editorContent).then(function() {
+                            listening = true;
+                        }).catch(function(err) {
+                            console.log("Error setting content", err);
+                            listening = true;
+                        });
+                    }
+                }
+
+                var throttled = _.throttle(onEditorChange, 500, {leading: true});
+                editor.on('change keyup setcontent blur', throttled);
+            }
         });
 
-        editor.setData(ext.field.getValue())
+       /* editor.setData(ext.field.getValue())
         ext.field.onValueChanged(function(value) {
             if (value !== currentValue) {
                 currentValue = value
@@ -55,7 +104,7 @@
                 currentValue = value
                 ext.field.setValue(value)
             }
-        })
+        })*/
     })
 </script>
 </body>
