@@ -1,0 +1,150 @@
+
+.button__transparent{
+    background: #fff !important;
+    color: #009D9A !important;
+    border: 1px solid #009D9A !important;
+}
+
+.button__transparent:hover{
+    background: #009D9A !important;
+    color: #fff !important;
+    border: 1px solid #009D9A !important;
+}
+
+.button__white-transparent{
+    background: none !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+
+.button__white-transparent:hover, a.button__white-transparent:hover{
+    background: #fff !important;
+    color: #009D9A !important;
+    border: 1px solid #fff !important;
+}
+
+.button__big{
+    font-size: 24px;
+    padding: 20px 80px 20px 80px;
+}
+
+.button__mini{
+    font-size: 14px !important;
+    padding: 10px 15px 10px 15px !important;
+
+}
+
+.button__red{
+    background: #E5251D !important;
+    color: #fff;
+}
+
+.button__red:hover, .button__red:focus{
+    background: #DB5155 !important;
+    color: #fff;
+}
+
+.button__green{
+    background: #8DC046 !important;
+}
+
+.button__green:hover, .button__green:focus{
+    background: #93C47D !important;
+}
+
+
+.button__indigo{
+    background: #0075B0 !important;
+}
+
+.button__indigo:hover, .button__indigo:focus{
+    background: #51BFEB !important;
+}
+
+
+.button__purple{
+    background: #8A1E82 !important;
+}
+
+.button__purple:hover, .button__purple:focus{
+    background: #A81EA0 !important;
+}
+
+
+.button__green{
+    background: #8DC046 !important;
+}
+
+.button__green:hover, .button__green:focus{
+    background: #93C47D !important;
+    color: #fff !important;
+}
+
+
+
+.button__red-transparent{
+    background: #fff !important;
+    border-color: #E5251D !important;
+    color: #E5251D !important;
+}
+
+.button__red-transparent:hover, .button__red-transparent:focus{
+    background: #E5251D !important;
+    border-color: #E5251D !important;
+}
+
+
+.button__green-transparent{
+    background: #fff !important;
+    border-color: #8DC046 !important;
+    color: #8DC046 !important;
+}
+
+.button__green-transparent:hover, .button__green-transparent:focus{
+    background: #8DC046 !important;
+    border-color: #8DC046 !important;
+}
+
+
+.button__teal-transparent{
+    background: #fff !important;
+    border-color: #009D9A !important;
+    color: #009D9A !important;
+}
+
+.button__teal-transparent:hover, .button__teal-transparent:focus{
+    background: #009D9A !important;
+    border-color: #009D9A !important;
+    color: #fff !important;
+}
+
+
+.button__indigo-transparent{
+    background: #fff !important;
+    border-color: #0075B0 !important;
+    color: #0075B0 !important;
+}
+
+.button__indigo-transparent:hover, .button__indigo-transparent:focus{
+    background: #0075B0 !important;
+    border-color: #0075B0 !important;
+    color: #fff !important;
+}
+
+
+.button__purple-transparent{
+    background: #fff !important;
+    border-color: #8A1E82 !important;
+    color: #8A1E82 !important;
+}
+
+.button__purple-transparent:hover, .button__purple-transparent:focus{
+    background: #8A1E82 !important;
+    border-color: #8A1E82 !important;
+    color: #fff !important;
+}
+
+
+.button__white-hover-shadow:hover, .button__white-hover-shadow:focus{
+    box-shadow: 0px 0px 15px rgba(255,255,255,0.5);
+}

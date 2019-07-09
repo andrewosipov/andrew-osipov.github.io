@@ -33,7 +33,7 @@
             selector: '#editor',
             max_height: 700,
             min_height: 500,
-            plugins: "autoresize textpattern lists advlist media link quickbars code",
+            plugins: "autoresize textpattern lists advlist media link autolink code importcss",
             toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | link | code",
             menubar: "edit view insert format",
             contextmenu: "link image imagetools table spellchecker",
@@ -43,7 +43,8 @@
                 {title: 'Big button', value: 'button-big'}
             ],
             preview_styles: "font-family font-size font-weight font-style text-decoration text-transform color background-color border border-radius outline text-shadow padding margin",
-            quickbars_insert_toolbar: 'quickimage quicktable',
+            content_css: "/styles.css",
+            // quickbars_insert_toolbar: 'quickimage quicktable',
             init_instance_callback : function(editor) {
                 var listening = true;
 
